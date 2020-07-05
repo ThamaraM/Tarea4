@@ -61,17 +61,32 @@ for SNR in rang_snr:
     plt.show()
 ```
 
+Cada iteración se observa de la siguiente forma:
+
 ## SNR = -2
+
+![](SNR_2.png)
 
 ## SNR = -1
 
+![](SNR_1.png)
+
 ## SNR = 0
+
+![](SNR0.png)
 
 ## SNR = 1
 
+![](SNR1.png)
+
 ## SNR = 2
 
+![](SNR2.png)
+
 ## SNR = 3
+
+![](SNR3.png)
+
 
 # Gráfica de la densidad espectral de potencia de la señal con el método de Welch, antes y después del canal ruidoso.
 ## Antes del canal ruidoso:
