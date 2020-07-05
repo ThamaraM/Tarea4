@@ -14,7 +14,7 @@ Según el enunciado se debe hacer uso de una frecuencia de 5000Hz por lo que se 
 `sen = np.sin(2*np.pi*f*tp)` 
 
 Y se obtiene la siguiente figura:
-![](Onda portadora.png)
+![](Onda_portadora.png)
 
 
 
