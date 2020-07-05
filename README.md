@@ -170,7 +170,7 @@ A continuación se pueden observar las gráficas obtenidas:
 
 En este caso si existen diferencias entre cada una de las gráficas.
 
-# Demodulación y decodificación de la señal y  conteo de la tasa de error de bits (BER, bit error rate) para cada nivel SNR.
+# Demodulación y decodificación de la señal y conteo de la tasa de error de bits (BER, bit error rate) para cada nivel SNR.
 
 Para esta sección primero era necesario calcular la energía de la onda original y a partir de esto se trabaja para decodificar la señal utilizando detección de energía. Se tiene el siguiente código:
 
@@ -209,6 +209,8 @@ SNR en dB | Cantidad de errores | Tasa de error
 
 
 # Grafica de BER versus SNR.
+A continuación se puede observar el código utilizado para graficar la tasa de error de bits en función de la relación señal a ruido desde -2 hasta 3 dB.
+Seguidamente, se puede observar la gráfica representativa.
 
 ```
 plt.figure(5)
@@ -218,5 +220,6 @@ plt.ylabel("BER")
 plt.title("BER en función del SNR")
 
 ```
+Seguidamente, se puede observar la gráfica representativa.
 
 ![](BERvsSNR.png)
