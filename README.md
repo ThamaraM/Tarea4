@@ -14,8 +14,20 @@ Según el enunciado se debe hacer uso de una frecuencia de 5000Hz por lo que se 
 `sen = np.sin(2*np.pi*f*tp)` 
 
 Y se obtiene la siguiente figura:
+
+
 ![](Onda_portadora.png)
 
+Ahora, para la modulación BPSK se define primero el vector de la señal modulada *senal*, y se define la señal modulada BPSK de la siguiente forma:
+
+```
+for k, b in enumerate(bits):
+  senal[k*p:(k+1)*p] = sen if b else -sen
+```
+
+Se define visualizar los primeros 15 periodos y se obtiene la siguiente figura:
+
+![](Primeros_periodos.png)
 
 
 # Potencia promedio de la señal modulada generada.
