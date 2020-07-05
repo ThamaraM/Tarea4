@@ -73,7 +73,7 @@ Cada iteración se observa de la siguiente forma:
 
 ## SNR = 0
 
-![](SNR0.png)
+![](SNR_0.png)
 
 ## SNR = 1
 
@@ -90,30 +90,83 @@ Cada iteración se observa de la siguiente forma:
 
 # Gráfica de la densidad espectral de potencia de la señal con el método de Welch, antes y después del canal ruidoso.
 ## Antes del canal ruidoso:
+Para graficar antes del canal ruidoso se tiene el seguiente código:
+```
+    fw, PSD = signal.welch(senal, fs, nperseg=1024)
+    plt.figure(3)
+    plt.semilogy(fw, PSD)
+    plt.xlabel('Frecuencia / Hz')
+    plt.ylabel('Densidad espectral de potencia / V**2/Hz')
+    plt.title("Densidad espectral de potencia antes del canal ruidoso")
+    plt.show()
+```
+Igualmente para cada iteración se tiene lo siguiente:
+
 ### SNR = -2
+
+![](_2antes.png)
 
 ### SNR = -1
 
+![](_1antes.png)
+
 ### SNR = 0
+
+![](0antes.png)
 
 ### SNR = 1
 
+![](1antes.png)
+
 ### SNR = 2
 
+![](2antes.png)
+
 ### SNR = 3
+
+![](3antes.png)
+
+
+Se puede observar que todas las figuras mostradas anteriormente son iguales.
 
 ## Después del canal ruidoso:
+El código utilizado para obtener las gráficas después del canal ruidoso es el siguiente:
+
+```
+    fw, PSD = signal.welch(Rx, fs, nperseg=1024)
+    plt.figure(4)
+    plt.semilogy(fw, PSD)
+    plt.xlabel('Frecuencia / Hz')
+    plt.ylabel('Densidad espectral de potencia / V**2/Hz')
+    plt.title("Densidad espectral de potencia despues del canal ruidoso")
+    plt.show()
+```
+
+A continuación se pueden observar las gráficas obtenidas:
+
 ### SNR = -2
+
+![](_2despues.png)
 
 ### SNR = -1
 
+![](_1despues.png)
+
 ### SNR = 0
+
+![](0despues.png)
 
 ### SNR = 1
 
+![](1despues.png)
+
 ### SNR = 2
 
+![](2despues.png)
+
 ### SNR = 3
+
+![](3despues.png)
 
 # Demodulación y decodificación de la señal y  conteo de la tasa de error de bits (BER, bit error rate) para cada nivel SNR.
 
