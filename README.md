@@ -209,3 +209,14 @@ SNR en dB | Cantidad de errores | Tasa de error
 
 
 # Grafica de BER versus SNR.
+
+```
+plt.figure(5)
+plt.scatter(rang_snr, BER)
+plt.xlabel("SNR (dB)")
+plt.ylabel("BER")
+plt.title("BER en función del SNR")
+
+```
+
+![](BERvsSNR.png)
