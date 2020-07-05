@@ -168,9 +168,35 @@ A continuación se pueden observar las gráficas obtenidas:
 
 ![](3despues.png)
 
-En este caso si existen varianzas entre cada una de las gráficas.
+En este caso si existen diferencias entre cada una de las gráficas.
 
 # Demodulación y decodificación de la señal y  conteo de la tasa de error de bits (BER, bit error rate) para cada nivel SNR.
+
+Para esta sección primero era necesario calcular la energía de la onda original y a partir de esto se trabaja para decodificar la señal utilizando detección de energía. Se tiene el siguiente código:
+
+```
+Es = np.sum(sen**2)#Pseudo-energía de la onda original
+    bitsRx = np.zeros(bits.shape) #Inicialización del vector de bits recibidos
+
+#Decodificación de la señal por detección de energía
+
+   for k, b in enumerate(bits):
+
+        Ep = np.sum(Rx[k*p:(k+1)*p] * sen)
+        if Ep > Es/2:
+            bitsRx[k] = 1
+        else:
+            bitsRx[k] = 0
+    
+    err = np.sum(np.abs(bits - bitsRx))
+    ber = err/N
+
+    BER.append(ber)
+    
+    print('Hay un total de {} errores en {} bits para una tasa de error de {}.'.format(err, N, BER))
+```
+
+De lo cual se obtiene la siguiente tabla con el valor de SNR, la cantidad de errores y la tasa de error:
 
 ## SNR = -2
 
