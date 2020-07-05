@@ -197,17 +197,15 @@ Es = np.sum(sen**2)#Pseudo-energía de la onda original
 ```
 
 De lo cual se obtiene la siguiente tabla con el valor de SNR, la cantidad de errores y la tasa de error:
+SNR en dB | Cantidad de errores | Tasa de error
+--------- | ------------------- | -------------
+-2 | 0 | 0
+-1 | 3 | 0.0003
+0 | 2 | 0.0002
+1 | 1 | 0.0001
+2 | 1 | 0.0001
+3 | 0 | 0
 
-## SNR = -2
 
-## SNR = -1
-
-## SNR = 0
-
-## SNR = 1
-
-## SNR = 2
-
-## SNR = 3
 
 # Grafica de BER versus SNR.
