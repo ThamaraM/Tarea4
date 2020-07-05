@@ -41,6 +41,26 @@ Donde la potencia promedio, corresponde a 0.4900009800019598.
 
 # Canal ruidoso del tipo AWGN (ruido aditivo blanco gaussiano) con una relación señal a ruido (SNR) desde -2 hasta 3 dB.
 
+En este caso se tiene un rango donde SNR varía de -2 a 3 dB. Por lo que se crea una lista con este rango y de acuerdo a esto se simula el canal para cada uno. Utilizando el siguiente código: 
+```
+rang_snr = list(range(-2,4))
+BER = []
+for SNR in rang_snr:
+    Pn = P_prom/ (10**(SNR / 10)) #Potencia del ruido para SNR y potencia de la señal dadas
+    sigma = np.sqrt(P_prom) # Desviación estándar del ruido
+    ruido = np.random.normal(0, sigma, senal.shape) #Crear ruido (Pn = sigma^2)
+    Rx = senal + ruido #Simular "el canal": señal recibida
+    
+    #Visualización de los primeros bits recibidos
+    pb = 15
+    plt.figure(2)
+    plt.plot(Rx[0:pb*p])
+    plt.xlabel("Tiempo (s)")
+    plt.ylabel("Amplitud de la señal")
+    plt.title("Canal ruidoso en el rango de SNR entre -2dB y 3dB.")
+    plt.show()
+```
+
 ## SNR = -2
 
 ## SNR = -1
@@ -53,10 +73,45 @@ Donde la potencia promedio, corresponde a 0.4900009800019598.
 
 ## SNR = 3
 
-# Grafica de la densidad espectral de potencia de la señal con el método de Welch, antes y después del canal ruidoso.
+# Gráfica de la densidad espectral de potencia de la señal con el método de Welch, antes y después del canal ruidoso.
+## Antes del canal ruidoso:
+### SNR = -2
 
+### SNR = -1
+
+### SNR = 0
+
+### SNR = 1
+
+### SNR = 2
+
+### SNR = 3
+
+## Después del canal ruidoso:
+### SNR = -2
+
+### SNR = -1
+
+### SNR = 0
+
+### SNR = 1
+
+### SNR = 2
+
+### SNR = 3
 
 # Demodulación y decodificación de la señal y  conteo de la tasa de error de bits (BER, bit error rate) para cada nivel SNR.
 
+## SNR = -2
+
+## SNR = -1
+
+## SNR = 0
+
+## SNR = 1
+
+## SNR = 2
+
+## SNR = 3
 
 # Grafica de BER versus SNR.
