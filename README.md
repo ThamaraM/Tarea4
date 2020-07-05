@@ -112,7 +112,7 @@ Igualmente para cada iteración se tiene lo siguiente:
 
 ### SNR = 0
 
-![](0antes.png)
+![](_0antes.png)
 
 ### SNR = 1
 
@@ -154,7 +154,7 @@ A continuación se pueden observar las gráficas obtenidas:
 
 ### SNR = 0
 
-![](0despues.png)
+![](_0despues.png)
 
 ### SNR = 1
 
@@ -167,6 +167,8 @@ A continuación se pueden observar las gráficas obtenidas:
 ### SNR = 3
 
 ![](3despues.png)
+
+En este caso si existen varianzas entre cada una de las gráficas.
 
 # Demodulación y decodificación de la señal y  conteo de la tasa de error de bits (BER, bit error rate) para cada nivel SNR.
 
