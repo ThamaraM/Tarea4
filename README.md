@@ -31,10 +31,27 @@ Se define visualizar los primeros 15 periodos y se obtiene la siguiente figura:
 
 
 # Potencia promedio de la señal modulada generada.
+```
+P_inst = senal**2 #Potencia instantánea
+P_prom = integrate.trapz(P_inst, t) / (N*T) #Potencia promedio a partir de la potencia instantánea
+print ('La potencia promedio corresponde a: ' + str(P_prom))
+```
+Donde la potencia promedio, corresponde a 0.4900009800019598.
 
 
 # Canal ruidoso del tipo AWGN (ruido aditivo blanco gaussiano) con una relación señal a ruido (SNR) desde -2 hasta 3 dB.
 
+## SNR = -2
+
+## SNR = -1
+
+## SNR = 0
+
+## SNR = 1
+
+## SNR = 2
+
+## SNR = 3
 
 # Grafica de la densidad espectral de potencia de la señal con el método de Welch, antes y después del canal ruidoso.
 
